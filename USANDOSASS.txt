@@ -1,0 +1,9 @@
+
+-> npm i -g sass
+
+-> mkdir src/styles/css (output)
+-> mkdir src/styles/scss (input)
+
+-> adicionar nos scripts do package.json: "sass": "sass --watch src/styles/scss:src/styles/css"
+
+-> yarn run sass

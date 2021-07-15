@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+html, body {
+  background-color: #F2F2F2;
+  padding: 0px;
+  margin: 0px;
+}
+
+.homepage {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding-top: 365px;
+}
+.homepage img:nth-of-type(1) {
+  position: fixed;
+  left: -254px;
+  top: 30px;
+  transform: rotateZ(-80.5deg);
+  z-index: 0;
+}
+.homepage img:nth-of-type(2) {
+  position: fixed;
+  left: 800px;
+  top: 120px;
+  z-index: 0;
+}
+.homepage div {
+  z-index: 99;
+}
+.homepage div div:nth-of-type(1) input {
+  background-color: #F2F2F2;
+  border: none;
+  font-family: "Roboto Mono";
+  width: 295px;
+  padding-left: 15px;
+  padding-bottom: 8px;
+  color: #1A1A1A;
+  opacity: 1;
+  font-size: 18px;
+}
+.homepage div div:nth-of-type(1) input:focus {
+  outline: none;
+}
+.homepage div div:nth-of-type(1) input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #1A1A1A;
+  opacity: 0.5;
+  font-size: 18px;
+}
+.homepage div div:nth-of-type(1) input::-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #1A1A1A;
+  font-size: 18px;
+}
+.homepage div div:nth-of-type(1) input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #1A1A1A;
+  font-size: 18px;
+}
+.homepage div div:nth-of-type(1) button {
+  background-color: #4CE500;
+  border: none;
+  height: 30px;
+  width: 100px;
+  color: #F2F2F2;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-family: "Roboto Mono";
+  font-size: 18px;
+}
+.homepage div div:nth-of-type(1) button:hover {
+  background-color: #339900;
+  cursor: pointer;
+}
+.homepage div div:nth-of-type(1) .loading {
+  opacity: 0.2;
+}
+.homepage div div:nth-of-type(2) {
+  width: 100%;
+  height: 5px;
+  background-color: #4CE500;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+}
+.homepage div #error-message {
+  color: #D92626;
+}
+.homepage .author {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  font-family: "Roboto Mono";
+  font-size: 14px;
+  color: #1A1A1A;
+}
+
+/*# sourceMappingURL=home.css.map */
