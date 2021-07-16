@@ -5,7 +5,7 @@ import { useParams, useHistory } from 'react-router-dom'
 const cepCoords = require('coordenadas-do-cep')
 
 function MapPage(props) {
-  const [ key, setKey ] = useState(process.env.REACT_APP_LEAFLET_KEY)
+  const [ key ] = useState(process.env.REACT_APP_LEAFLET_KEY)
   const [ cepInfo, setCepInfo ] = useState({})
   const history = useHistory()
   const match = useParams()
@@ -15,7 +15,6 @@ function MapPage(props) {
     async function getCepInfo() {
       try {
         const cepInfo = await cepCoords.getInfoCep(match.cep)
-        console.log(cepInfo)
         setCepInfo(cepInfo)
       } catch(err) {
         console.log('Ocorreu um erro')

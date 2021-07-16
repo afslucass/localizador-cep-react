@@ -8,15 +8,15 @@
     padding-top: 365px;
 
     img:nth-of-type(1) {
-        position: fixed;    
+        position: absolute;    
         left: -254px;
         top: 30px;
         transform: rotateZ(-80.5deg);
         z-index: 0;
     }
     img:nth-of-type(2) {
-        position: fixed;
-        left: 800px;
+        position: absolute;
+        right: 0px;
         top: 120px;
         z-index: 0;
     }
@@ -84,12 +84,26 @@
     }
 
     .author {
-        position: fixed;
+        position: absolute;
         left: 20px;
         bottom: 20px;
 
         font-family: 'Roboto Mono';
         font-size: 14px;
-        color: #1A1A1A
+        color: red
+    }
+}
+
+article {
+    margin-top: 500px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(0, 0%, 5%);
+
+    p {
+        width: 800px;
+        margin: 20px auto;
+        text-align: justify;
+        color: hsl(0, 0%, 10%);
     }
 }
