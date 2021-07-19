@@ -18,11 +18,21 @@ html, body {
   transform: rotateZ(-80.5deg);
   z-index: 0;
 }
+@media (max-width: 600px) {
+  .homepage img:nth-of-type(1) {
+    width: 0px;
+  }
+}
 .homepage img:nth-of-type(2) {
   position: absolute;
   right: 0px;
   top: 120px;
   z-index: 0;
+}
+@media (max-width: 600px) {
+  .homepage img:nth-of-type(2) {
+    width: 0px;
+  }
 }
 .homepage div {
   z-index: 99;
@@ -31,7 +41,7 @@ html, body {
   background-color: #F2F2F2;
   border: none;
   font-family: "Roboto Mono";
-  width: 295px;
+  max-width: 295px;
   padding-left: 15px;
   padding-bottom: 8px;
   color: #1A1A1A;
@@ -72,14 +82,24 @@ html, body {
   background-color: #339900;
   cursor: pointer;
 }
+@media (max-width: 350px) {
+  .homepage div div:nth-of-type(1) button {
+    margin-left: 20px;
+  }
+}
 .homepage div div:nth-of-type(1) .loading {
   opacity: 0.2;
 }
 .homepage div div:nth-of-type(2) {
-  width: 100%;
+  max-width: 100%;
   height: 5px;
   background-color: #4CE500;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 600px) {
+  .homepage div div:nth-of-type(2) {
+    width: 0px;
+  }
 }
 .homepage div #error-message {
   color: #D92626;
@@ -100,6 +120,11 @@ html, body {
   font-size: 14px;
   color: green;
 }
+@media (max-width: 600px) {
+  .homepage .down {
+    bottom: 50px;
+  }
+}
 
 article {
   margin-top: 500px;
@@ -108,7 +133,7 @@ article {
   color: #0d0d0d;
 }
 article p {
-  width: 800px;
+  max-width: 800px;
   margin: 40px auto;
   text-align: justify;
   color: #1a1a1a;
@@ -117,6 +142,12 @@ article .img > p {
   margin: 1px auto;
   font-size: 12px;
 }
+article .img > img {
+  max-width: 70%;
+}
+article a {
+  word-break: break-all;
+}
 
 .mappage {
   height: 100vh;
@@ -124,16 +155,35 @@ article .img > p {
   display: flex;
   flex-flow: row wrap;
 }
+@media (max-width: 600px) {
+  .mappage {
+    display: block;
+  }
+}
 .mappage .info {
   width: 30%;
   height: 100%;
   background: linear-gradient(166.7deg, #89CC66 43.23%, #ABE48F 90.1%);
+}
+@media (max-width: 600px) {
+  .mappage .info {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 .mappage .info .cep {
   margin: 100px 60px;
   font-family: "Roboto Mono";
   color: #F2F2F2;
   font-size: 24px;
+}
+@media (max-width: 600px) {
+  .mappage .info .cep {
+    font-size: 18px;
+    margin: 0px 0px;
+    padding: 10px 20px;
+  }
 }
 .mappage .info .content {
   margin-left: 40px;
@@ -143,8 +193,15 @@ article .img > p {
   font-size: 18px;
   color: #333333;
 }
+@media (max-width: 600px) {
+  .mappage .info .content {
+    margin: 0px 0px;
+    padding: 0px 20px;
+    font-size: 14px;
+  }
+}
 .mappage .info .content .item-content {
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 .mappage .info .voltar-btn {
   border: none;
@@ -157,6 +214,13 @@ article .img > p {
   font-size: 18px;
   cursor: pointer;
 }
+@media (max-width: 600px) {
+  .mappage .info .voltar-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+}
 .mappage .info .voltar-btn:hover {
   transition: 0.1s ease-in;
   background-color: #CB381A;
@@ -164,6 +228,12 @@ article .img > p {
 .mappage .map {
   width: 70%;
   height: 100%;
+}
+@media (max-width: 600px) {
+  .mappage .map {
+    width: 100%;
+    height: 80%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

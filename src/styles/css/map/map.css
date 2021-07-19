@@ -11,16 +11,35 @@ html, body {
   display: flex;
   flex-flow: row wrap;
 }
+@media (max-width: 600px) {
+  .mappage {
+    display: block;
+  }
+}
 .mappage .info {
   width: 30%;
   height: 100%;
   background: linear-gradient(166.7deg, #89CC66 43.23%, #ABE48F 90.1%);
+}
+@media (max-width: 600px) {
+  .mappage .info {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 .mappage .info .cep {
   margin: 100px 60px;
   font-family: "Roboto Mono";
   color: #F2F2F2;
   font-size: 24px;
+}
+@media (max-width: 600px) {
+  .mappage .info .cep {
+    font-size: 18px;
+    margin: 0px 0px;
+    padding: 10px 20px;
+  }
 }
 .mappage .info .content {
   margin-left: 40px;
@@ -30,8 +49,15 @@ html, body {
   font-size: 18px;
   color: #333333;
 }
+@media (max-width: 600px) {
+  .mappage .info .content {
+    margin: 0px 0px;
+    padding: 0px 20px;
+    font-size: 14px;
+  }
+}
 .mappage .info .content .item-content {
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 .mappage .info .voltar-btn {
   border: none;
@@ -44,6 +70,13 @@ html, body {
   font-size: 18px;
   cursor: pointer;
 }
+@media (max-width: 600px) {
+  .mappage .info .voltar-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+}
 .mappage .info .voltar-btn:hover {
   transition: 0.1s ease-in;
   background-color: #CB381A;
@@ -51,6 +84,12 @@ html, body {
 .mappage .map {
   width: 70%;
   height: 100%;
+}
+@media (max-width: 600px) {
+  .mappage .map {
+    width: 100%;
+    height: 80%;
+  }
 }
 
 /*# sourceMappingURL=map.css.map */
