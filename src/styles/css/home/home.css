@@ -92,6 +92,14 @@ html, body {
   font-size: 14px;
   color: red;
 }
+.homepage .down {
+  position: absolute;
+  margin: auto;
+  bottom: 20px;
+  font-family: "Roboto Mono";
+  font-size: 14px;
+  color: green;
+}
 
 article {
   margin-top: 500px;
@@ -101,9 +109,13 @@ article {
 }
 article p {
   width: 800px;
-  margin: 20px auto;
+  margin: 40px auto;
   text-align: justify;
   color: #1a1a1a;
+}
+article .img > p {
+  margin: 1px auto;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=home.css.map */
