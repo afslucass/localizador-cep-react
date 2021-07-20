@@ -19,6 +19,9 @@ function Home(props) {
         try {
             setLoading('loading')
             document.querySelector('button').disabled = true
+            cepCoords.setOpcoes({
+                busca_aproximada: true
+            })
             const cepData = await cepCoords.getByCep(cep)
             history.push(`/map/${cep}/${cepData.lat}/${cepData.lon}`)
         } catch (err) {

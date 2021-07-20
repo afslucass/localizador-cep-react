@@ -16,8 +16,19 @@ function MapPage(props) {
       try {
         const cepInfo = await cepCoords.getInfoCep(match.cep)
         setCepInfo(cepInfo)
+
+        cepCoords.setOpcoes({
+          busca_aproximada: false
+        })
+
+        await cepCoords.getByCep(match.cep)
+
       } catch(err) {
-        console.log('Ocorreu um erro')
+        if(err === 404) {
+          alert('Sem Registro. \nO resultado se trata de uma aproximação que pode não corresponder a realidade.')
+        } else {
+          console.log('Ocorreu um erro')
+        }
       }
     }
 
